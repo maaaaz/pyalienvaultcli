@@ -10,7 +10,7 @@ from OTXv2 import OTXv2
 from OTXv2 import IndicatorTypes
 
 # Globals
-VERSION = '1.1'
+VERSION = '1.2'
 SECRET_ALIENVAULT_API_KEY = 'SECRET_ALIENVAULT_API_KEY'
 
 # Options definition
@@ -64,8 +64,12 @@ def main():
     
     with open(options.input_file, mode='r', encoding='utf-8') as fd_input:
         new_indicators = make_indicators_from_file(fd_input)
-        response = otx.add_pulse_indicators(options.pulse_id, new_indicators)
-        print(str(response))
+        try:
+            response = otx.add_pulse_indicators(options.pulse_id, new_indicators)
+            print(str(response))
+        
+        except Exception as e:
+            print("[!] Exception: '%s'" % e)
     
     return
 
