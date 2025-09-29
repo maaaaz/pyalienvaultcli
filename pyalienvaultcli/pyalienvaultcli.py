@@ -10,7 +10,7 @@ from OTXv2 import OTXv2
 from OTXv2 import IndicatorTypes
 
 # Globals
-VERSION = '1.2'
+VERSION = '1.3'
 SECRET_ALIENVAULT_API_KEY = 'SECRET_ALIENVAULT_API_KEY'
 
 # Options definition
@@ -69,7 +69,7 @@ def main():
             print(str(response))
         
         except Exception as e:
-            print("[!] Exception: '%s'" % e)
+            print('[!] Exception: "%s"' % e)
     
     return
 
