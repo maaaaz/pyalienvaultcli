@@ -9,14 +9,14 @@ from OTXv2 import OTXv2
 from OTXv2 import IndicatorTypes
 
 # Globals
-VERSION = '1.4'
+VERSION = '1.5'
 SECRET_ALIENVAULT_API_KEY = 'SECRET_ALIENVAULT_API_KEY'
 
 # Options definition
 parser = argparse.ArgumentParser(description="version: " + VERSION)
 parser.add_argument('-k', '--api-key', help='API key (could either be provided in the "%s" env var)' % SECRET_ALIENVAULT_API_KEY, type = str)
 parser.add_argument('-a', '--action', help="Action to perform (default 'add')", choices = ['add'], type = str.lower, default = 'add')
-parser.add_argument('-p', '--pulse_id', help='Pulse ID to perform the requested action', type = str.lower, required = True)
+parser.add_argument('-p', '--pulse-id', help='Pulse ID to perform the requested action', type = str.lower, required = True)
 parser.add_argument('-i', '--input-file', help='Input file as a list of newline-separated IoC', required = True)
 
 def make_indicator(entry, type):
