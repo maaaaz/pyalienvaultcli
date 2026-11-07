@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import os
 import argparse
-import datetime
 import pprint
 
 import validators
@@ -10,7 +9,7 @@ from OTXv2 import OTXv2
 from OTXv2 import IndicatorTypes
 
 # Globals
-VERSION = '1.3'
+VERSION = '1.4'
 SECRET_ALIENVAULT_API_KEY = 'SECRET_ALIENVAULT_API_KEY'
 
 # Options definition
